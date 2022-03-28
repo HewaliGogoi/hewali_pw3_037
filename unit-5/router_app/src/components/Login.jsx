@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from './context/AuthContext';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const FormWrapper = styled.form`
     display: flex;
@@ -12,8 +13,9 @@ const FormWrapper = styled.form`
 `;
 
 const Login = () => {
-  const {isAuth, handleState} = useContext(AuthContext);
-  
+  const navigate = useNavigate();
+  const {isAuth, handleState} = useContext(AuthContext);  
+
   const [log, setLog] = useState({
     email : '',
     password : ''
@@ -41,12 +43,12 @@ const Login = () => {
 
     if(name == data.name && password == data.password){
       handleState();
+      navigate("/");
     }else{
       prompt('Please provide the valid details')
     }
 
     console.log(data);
-    // navigate("/login");
     // getData();
   }
 
