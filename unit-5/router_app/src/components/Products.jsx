@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ProductWrapper = styled.div`
@@ -9,15 +10,58 @@ const ProductWrapper = styled.div`
   }
 `;
 
+  const ProWrap = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    div{
+      border:2px solid red; 
+      width: 30%;
+      margin : 2% 0%;
+    }
+  `;
+
 const Products = () => {
-  
+  const navigate = useNavigate();
+  const [list, setList] = useState([]);
+
+  React.useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      let data = await fetch('http://localhost:3004/product');
+      data = await data.json();
+      setList([...data]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const handlePro = (val) => {
+    navigate(`/productid/${val}`);
+  }
+
   return (
     <ProductWrapper>
       <div>Products</div>
-      <a href="">Electronics</a>
-      <a href="">Clothing</a>
-      <a href="">Food</a>
-      <a href="">Stationary</a>
+      <div>
+        <a href="">Electronics</a>
+        <a href="">Clothing</a>
+        <a href="">Food</a>
+        <a href="">Stationary</a>
+      </div>
+      <ProWrap>
+        {
+          list.map((ele)=><div key = {ele.name}>
+            <p>{ele.name}</p>
+            <p>{ele.category}</p>
+            <p>{ele.price}</p>
+            <button onClick = {() => handlePro(ele.name)}>Product</button>
+          </div>)
+        }
+      </ProWrap>
     </ProductWrapper>
   )
 }
