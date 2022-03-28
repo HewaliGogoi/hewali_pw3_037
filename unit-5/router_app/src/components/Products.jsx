@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ProductWrapper = styled.div`
-  border:2px solid black;
-
+  // border:2px solid black;
+  
   a{
     margin: 2%;
   }
@@ -13,11 +13,13 @@ const ProductWrapper = styled.div`
   const ProWrap = styled.div`
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     div{
       border:2px solid red; 
-      width: 30%;
-      margin : 2% 0%;
+      width: 20%;
+      margin : 2% 2%;
+      border-radius: 10px;
+      padding: 2%;
     }
   `;
 
