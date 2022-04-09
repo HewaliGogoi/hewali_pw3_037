@@ -24,18 +24,82 @@
       "age": "",
       "password": "",
       "id": 1
+    },
+    {
+      "name": "Hewali Gogoi",
+      "email": "hewaligogoi22@gmail.com",
+      "mobile": "07002200437",
+      "age": "22",
+      "password": "hewali",
+      "id": 2
+    },
+    {
+      "name": "Hewali Gogoi",
+      "email": "hewaligogoi22@gmail.com",
+      "mobile": "07002200437",
+      "age": "22",
+      "password": "hewali",
+      "id": 3
+    },
+    {
+      "name": "Hewali Gogoi",
+      "email": "hewaligogoi22@gmail.com",
+      "mobile": "07002200437",
+      "age": "22",
+      "password": "hewali",
+      "id": 4
     }
   ],
-  "product":[
-    { "name": "1", "category": "Electronics", "price": "1000" },
-    { "name": "2", "category": "Clothing", "price": "1000" },
-    { "name": "3", "category": "Food", "price": "1000" },
-    { "name": "4", "category": "Stationary", "price": "1000" },
-    { "name": "5", "category": "Electronics", "price": "1000" },
-    { "name": "6", "category": "Clothing", "price": "1000" },
-    { "name": "7", "category": "Food", "price": "1000" },
-    { "name": "8", "category": "Stationary", "price": "1000" },
-    { "name": "9", "category": "Electronics", "price": "1000" },
-    { "name": "10", "category": "Clothing", "price": "1000" }
+  "product": [
+    {
+      "name": "1",
+      "category": "Electronics",
+      "price": "1000"
+    },
+    {
+      "name": "2",
+      "category": "Clothing",
+      "price": "1000"
+    },
+    {
+      "name": "3",
+      "category": "Food",
+      "price": "1000"
+    },
+    {
+      "name": "4",
+      "category": "Stationary",
+      "price": "1000"
+    },
+    {
+      "name": "5",
+      "category": "Electronics",
+      "price": "1000"
+    },
+    {
+      "name": "6",
+      "category": "Clothing",
+      "price": "1000"
+    },
+    {
+      "name": "7",
+      "category": "Food",
+      "price": "1000"
+    },
+    {
+      "name": "8",
+      "category": "Stationary",
+      "price": "1000"
+    },
+    {
+      "name": "9",
+      "category": "Electronics",
+      "price": "1000"
+    },
+    {
+      "name": "10",
+      "category": "Clothing",
+      "price": "1000"
+    }
   ]
 }
