@@ -46,6 +46,16 @@
       "department": "",
       "salary": "40000000",
       "id": 3
+    },
+    {
+      "name": "Biswajit",
+      "age": "40",
+      "gender": "Male",
+      "contact": "405",
+      "image": "",
+      "department": "",
+      "salary": "5",
+      "id": 4
     }
   ]
 }
