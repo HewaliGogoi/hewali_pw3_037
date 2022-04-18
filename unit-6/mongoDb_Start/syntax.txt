@@ -1,0 +1,30 @@
+> use Assignments
+
+> db.createCollection("users")
+
+> db.getCollection("users").insert({"first_name":"Hewali", "last_name":"Gogoi", "email":"hewaligogoi22@gmail.com", "gender":"F", "ip_address":123, "age":22})
+
+> db.users.insertMany([{"first_name":"Mary", "last_name":"Gogoi", "email":"abc@gmail.com", "gender":"F", "ip_address":123, "age":22},{"first_name":"Happy", "last_name":"Gogoi", "email":"def22@gmail.com", "gender":"F", "ip_address":123, "age":22},{"first_name":"a", "last_name":"ab", "email":"ghi@gmail.com", 
+"gender":"M", "ip_address":123, "age":22},{"first_name":"b", "last_name":"bcd", "email":"jkl@gmail.com", "gender":"M", "ip_address":123, "age":22}])
+
+> db.users.insertMany([{"first_name":"c", "last_name":"cd", "email":"mno@gmail.com", "gender":"F", "ip_address":123, "age":22},{"first_name":"d", "last_name":"de", "email":"pqr@gmail.com", "gender":"F", "ip_address":123, "age":22},{"first_name":"e", "last_name":"ef", "email":"stu@gmail.com", "gender":"F", "ip_address":123, "age":22},{"first_name":"f", "last_name":"fg", "email":"vwx@gmail.com", "gender":"M", "ip_address":123, "age":22},{"first_name":"g", "last_name":"gh", "email":"yz@gmail.com", "gender":"F", "ip_address":123, "age":22}])
+
+> db.users.findOne({})
+
+> db.users.find({}) 
+
+> db.users.update({"first_name":"c"}, {$set:{"age":18}})
+
+> db.users.update({"first_name":"d"}, {$set:{"age":18}})
+
+> db.users.update({"first_name":"e"}, {$set:{"age":18}})
+
+> db.users.updateMany({"age":22}, {$set:{"ip_address":345}})
+
+> db.users.remove({"first_name":"g"})
+
+> db.users.deleteOne({}) 
+
+> db.users.deleteMany({})
+
+> db.dropDatabase()
