@@ -521,4 +521,6 @@
 
 > db.movies.find({$and : [ {"production_year ": {$gte : 2000 }}, {"production_year " : {$lte : 2010}} ] }).pretty()
 
-> db.movies.find({"production_year " : {$sort : -1}}).pretty()
+> db.movies.find({}).sort({"production_year " : -1, "movie_name " : -1}).pretty() 
+
+> db.movies.find({}).sort({"production_year " : -1, "movie_name " : -1}).skip(10).limit(5).pretty() 
