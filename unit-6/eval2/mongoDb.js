@@ -11,7 +11,7 @@ class Mongo{
         });
         mongoose.connection.on('error', () => {
             console.log('Error occured.');
-        })
+        });
     }
 }
 
