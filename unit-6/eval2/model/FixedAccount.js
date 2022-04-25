@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const FixedAccount = new mongoose.Schema({
-    "account_number" : {type : Number, required : true},
+    "account_number" : {type : Number, required : true, unique : true},
     "balance" : {type : Number, required : true},
     "interestRate" : {type : Number, required : true},
     "startDate" : {type : Date, required : true},

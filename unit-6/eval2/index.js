@@ -1,6 +1,6 @@
 const http = require('http');
 const app = require('./routes/master');
-const PORT = 9001;
+const PORT = 9006;
 const connectToDb = require('./mongoDb');
 
 // const fixedController = require('./controllers/fixedController');
