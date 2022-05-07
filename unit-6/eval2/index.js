@@ -1,7 +1,15 @@
 const http = require('http');
-const app = require('./routes/master');
+const app = require('./routes/fixed');
 const PORT = 9006;
 const connectToDb = require('./mongoDb');
+const {engine} = require('express-handlebars');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json([]));
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views')
 
 // const fixedController = require('./controllers/fixedController');
 // const masterController = require('./controllers/masterController');
