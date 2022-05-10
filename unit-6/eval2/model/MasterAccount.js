@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const MasterAccount = new mongoose.Schema({
-    "balance" : {type : Number, required : true},
-    "createdAt" : {type : Date, required : true},
-    "updatedAt" : {type : Date, required : true},
+    "balance" : {type : Number, required : true}
+},
+{
+    timestamps : true
 });
 
 module.exports = mongoose.model("MasterAccount", MasterAccount);

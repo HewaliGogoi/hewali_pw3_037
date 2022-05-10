@@ -6,5 +6,6 @@ const savingsController = require('../controllers/savingsController');
 app.use(bodyParser.json([]));
 
 app.post('/user/savingsAccount', savingsController.createSavings);
+app.get('/user/savingsAccount', savingsController.getSavings);
 
 module.exports = app;

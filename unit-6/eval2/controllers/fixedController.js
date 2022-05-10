@@ -3,7 +3,7 @@ const FixedAccount = require('../model/FixedAccount');
 async function createFixed(req, res){
     try {
         let fixedDetail = req.body;
-        let response = await FixedAccount.insertMany([fixedDetail]);
+        let response = await FixedAccount.insertMany([fixedDetail]).lean().exec();
         res.json(response);
         // res.render('home', {name : "Hewali"})
     } catch (error) {

@@ -1,15 +1,16 @@
 const http = require('http');
-const app = require('./routes/fixed');
+const express = require('express');
+const app = require('./routes/savings');
 const PORT = 9006;
 const connectToDb = require('./mongoDb');
 const {engine} = require('express-handlebars');
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json([]));
+app.use(express.json());
 
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-app.set('views', './views')
+// app.engine('handlebars', engine());
+// app.set('view engine', 'handlebars');
+// app.set('views', './views')
 
 // const fixedController = require('./controllers/fixedController');
 // const masterController = require('./controllers/masterController');
@@ -19,7 +20,7 @@ app.set('views', './views')
 // app.use('masterAccount', masterController);
 // app.use('savingsAccount', savingsController);
 
-http.createServer(app).listen(PORT, () => {
+app.listen(PORT, () => {
     new connectToDb();
     console.log(`Listening to port ${PORT}...`);
 })

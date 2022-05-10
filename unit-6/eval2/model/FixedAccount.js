@@ -5,9 +5,10 @@ const FixedAccount = new mongoose.Schema({
     "balance" : {type : Number, required : true},
     "interestRate" : {type : Number, required : true},
     "startDate" : {type : Date, required : true},
-    "maturityDate" : {type : Date, required : true},
-    "createdAt" : {type : Date, required : true},
-    "updatedAt" : {type : Date, required : true},
+    "maturityDate" : {type : Date, required : true}
+},
+{
+    timestamps : true
 });
 
 module.exports = mongoose.model("FixedAccount", FixedAccount);

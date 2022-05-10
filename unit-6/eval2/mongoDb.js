@@ -5,7 +5,7 @@ class Mongo{
         this.createMongoConnection();
     };
     createMongoConnection(){
-        mongoose.connect('mongodb://Hewali:123@localhost:27017/banking_system');
+        mongoose.connect('mongodb+srv://Hewali:Hewali_123@cluster0.n8vku.mongodb.net/banking_system');
         mongoose.connection.once('open', () => {
             console.log('MongoDb is connected.');
         });

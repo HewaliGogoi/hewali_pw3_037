@@ -13,4 +13,4 @@ const user = new mongoose.Schema({
     "updatedAt" : {type : Date, required : true},
 });
 
-module.exports = mongoose.model("user", user);
+module.exports = mongoose.model("banking_system", user);
